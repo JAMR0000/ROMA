@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import en from '../../locales/en.json';
+---
+
+<Layout lang="en" title="Home">
+  <Header t={en.header} />
+  <Footer t={en.footer} />
+</Layout>

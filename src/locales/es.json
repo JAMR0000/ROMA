@@ -1,0 +1,15 @@
+{
+  "header": {
+    "option1": "INICIO",
+    "option2": "NOSOTROS",
+    "option3": "EQUIPO",
+    "option4": "SERVICIOS",
+    "option5": "TESTIMONIOS",
+    "option6": "GALERIA",
+    "option7": "RECOMENDACIONES",
+    "option8": "CONTACTO"
+  },
+  "footer": {
+    "text": "Todos los derechos reservados"
+  }
+}

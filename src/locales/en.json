@@ -1,0 +1,15 @@
+{
+  "header": {
+    "option1": "HOME",
+    "option2": "ABOUT",
+    "option3": "TEAM",
+    "option4": "SERVICES",
+    "option5": "TESTIMONIALS",
+    "option6": "GALLERY",
+    "option7": "REVIEWS",
+    "option8": "CONTACT"
+  },
+  "footer": {
+    "text": "All rights reserved"
+  }
+}
