@@ -1,13 +1,25 @@
 ---
-const { t } = Astro.props;
+import es from '../locales/es.json';
+import en from '../locales/en.json';
 
 // Detectar idioma desde la URL
 const lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'es';
 
+// Traducciones
+const t = lang === 'en' ? en.header : es.header;
+
 // Prefijo para links internos
 const prefix = lang === 'en' ? '/en' : '';
 
-// Lista de rutas
+// Ruta actual sin el /en al inicio (para el toggle)
+const currentPath = Astro.url.pathname.replace(/^\/en/, '');
+
+// URL para cambiar de idioma y quedarse en la misma página
+const toggleLang = lang === 'en'
+  ? currentPath || '/'          // si estoy en inglés → quitar `/en`
+  : `/en${Astro.url.pathname}`; // si estoy en español → agregar `/en`
+
+// Links de navegación
 const links = [
   { path: '/', label: t.option1 },
   { path: '/about', label: t.option2 },
@@ -18,11 +30,6 @@ const links = [
   { path: '/reviews', label: t.option7 },
   { path: '/contact', label: t.option8 },
 ];
-
-// URL para cambiar de idioma
-const toggleLang = lang === 'en'
-  ? Astro.url.pathname.replace(/^\/en/, '')
-  : `/en${Astro.url.pathname}`;
 ---
 
 <header>

@@ -1,5 +1,11 @@
 ---
-const { t } = Astro.props;
+import es from '../locales/es.json';
+import en from '../locales/en.json';
+
+const lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'es';
+const t = lang === 'en' ? en.footer : es.footer;
+
+const prefix = lang === 'en' ? '/en' : '';
 ---
 
 <footer>
