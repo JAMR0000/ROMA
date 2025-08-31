@@ -1,8 +1,23 @@
-@import "bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'bootstrap/scss/bootstrap';
 
-:root{
-  --primary-color: #B00D46;
-  --hover-color: #BB2725;
-  --white-color: #FFFFFF;
+:root {
+  --primary-color: #b00d46;
+  --hover-color: #bb2725;
+  --white-color: #ffffff;
   --black-color: #000000;
+}
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+p {
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 }

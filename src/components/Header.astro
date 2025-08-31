@@ -1,158 +1,180 @@
 ---
 const { t } = Astro.props;
-let isOpen = false;
+
+// Detectar idioma desde la URL
+const lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'es';
+
+// Prefijo para links internos
+const prefix = lang === 'en' ? '/en' : '';
+
+// Lista de rutas
+const links = [
+  { path: '/', label: t.option1 },
+  { path: '/about', label: t.option2 },
+  { path: '/team', label: t.option3 },
+  { path: '/service', label: t.option4 },
+  { path: '/testimonials', label: t.option5 },
+  { path: '/gallery', label: t.option6 },
+  { path: '/reviews', label: t.option7 },
+  { path: '/contact', label: t.option8 },
+];
+
+// URL para cambiar de idioma
+const toggleLang = lang === 'en'
+  ? Astro.url.pathname.replace(/^\/en/, '')
+  : `/en${Astro.url.pathname}`;
 ---
 
 <header>
-  <div class='container'>
-    <div class='generalContent'>
-      <div class='logo'>
-        <a href='/'><div class='contentLogo'></div></a>
+  <div class="container">
+    <div class="generalContent">
+      <div class="logo">
+        <a href={prefix + '/'}><div class="contentLogo"></div></a>
       </div>
-      <div class='linkColumnDesk'>
-        <p><a href='/'>{t.option1}</a></p>
-        <p><a href='/about'>{t.option2}</a></p>
-        <p><a href='/team'>{t.option3}</a></p>
-        <p><a href='/services'>{t.option4}</a></p>
-        <p><a href='/testimonials'>{t.option5}</a></p>
-        <p><a href='/gallery'>{t.option6}</a></p>
-        <p><a href='/reviews'>{t.option7}</a></p>
-        <p><a href='/contact'>{t.option8}</a></p>
+
+      <div class="linkColumnDesk">
+        {links.map(link => (
+          <p><a href={prefix + link.path}>{link.label}</a></p>
+        ))}
       </div>
-      <div class='linkColumnMobil'>
-        <button
-          class='menuButton'
-          aria-label='Abrir menú'
-          onclick="document.querySelector('.mobileMenu').classList.toggle('active')"
-        ></button>
+
+      <div class="linkColumnMobil">
+        <button class="menuButton" onclick="document.querySelector('.mobileMenu').classList.toggle('active')"></button>
       </div>
     </div>
   </div>
-  <nav class='mobileMenu'>
-    <div class='generalContentMobil'>
-      <div class='headerMobil'>
+
+  <nav class="mobileMenu">
+    <div class="generalContentMobil">
+      <div class="headerMobil">
         <p class="titleMenu">Menu</p>
-        <button class='closeButton' aria-label='Cerrar menú' onclick="document.querySelector('.mobileMenu').classList.remove('active')"></button>
+        <button class="closeButton" onclick="document.querySelector('.mobileMenu').classList.remove('active')"></button>
       </div>
-      <div class='options'>
-        <p><a href='/'>{t.option1}</a></p>
-        <p><a href='/about'>{t.option2}</a></p>
-        <p><a href='/team'>{t.option3}</a></p>
-        <p><a href='/services'>{t.option4}</a></p>
-        <p><a href='/testimonials'>{t.option5}</a></p>
-        <p><a href='/gallery'>{t.option6}</a></p>
-        <p><a href='/reviews'>{t.option7}</a></p>
-        <p><a href='/contact'>{t.option8}</a></p>
+      <div class="options">
+        {links.map(link => (
+          <p><a href={prefix + link.path}>{link.label}</a></p>
+        ))}
       </div>
     </div>
   </nav>
 </header>
+
+<a class="changeLenguage" href={toggleLang}>
+  {lang === 'es' ? 'English' : 'Español'}
+</a>
+
 <style lang='scss'>
-  header {
-    padding: 25px 0;
-    background-color: aqua;
-    a {
-      text-decoration: none;
-      color: var(--black-color);
-      font-weight: bold;
-      transition: color 0.3s ease;
-      &:hover {
-        color: var(--primary-color);
-        transition: color 0.3s ease;
-      }
+header {
+  padding: 25px 0;
+  background-color: aqua;
+
+  a {
+    text-decoration: none;
+    color: var(--black-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+    &:hover {
+      color: var(--primary-color);
     }
-    .generalContent {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      .contentLogo {
-        width: 50px;
-        height: 50px;
-        background-image: url('../assets/Header/logo_black.webp');
+  }
+
+  .generalContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .contentLogo {
+      width: 50px;
+      height: 50px;
+      background-image: url('../assets/Header/logo_black.webp');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .linkColumnDesk {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      p { margin-bottom: 0; align-self: center; text-align: center; }
+    }
+
+    .linkColumnMobil { display: none; }
+  }
+
+  .mobileMenu {
+    display: none !important;
+    &.active { transform: translateY(0); }
+  }
+}
+
+@media (max-width: 992px) {
+  header .generalContent {
+    grid-template-columns: 1fr 1fr;
+    .linkColumnDesk { display: none; }
+    .linkColumnMobil { display: block; justify-self: end; align-self: center;
+      .menuButton {
+        background: none;
+        border: none;
+        width: 30px;
+        height: 30px;
+        background-image: url('../assets/Header/menu_mobil.svg');
         background-size: cover;
         background-position: center;
       }
-      .linkColumnDesk {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-        p {
-          margin-bottom: 0;
-          align-self: center;
-          text-align: center;
-        }
-      }
-      .linkColumnMobil {
-        display: none;
-      }
-    }
-    .mobileMenu {
-      display: none !important;
     }
   }
-  @media (max-width: 992px) {
-    header {
-      .generalContent {
-        grid-template-columns: 1fr 1fr;
-        .linkColumnDesk {
-          display: none;
-        }
-        .linkColumnMobil {
-          display: block;
-          justify-self: end;
+
+  .mobileMenu {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+
+    .generalContentMobil {
+      width: 100%;
+      text-align: center;
+
+      .headerMobil {
+        display: grid;
+        grid-template-columns: 1fr 30px;
+        padding: 15px;
+
+        .titleMenu { margin-bottom: 0; justify-self: start; align-self: center; font-weight: bold; font-size: 30px; }
+
+        .closeButton {
+          width: 30px;
+          height: 30px;
+          justify-self: start;
           align-self: center;
-          .menuButton {
-            background: none;
-            border: none;
-            width: 30px;
-            height: 30px;
-            background-image: url('../assets/Header/menu_mobil.svg');
-            background-size: cover;
-            background-position: center;
-          }
+          background: none;
+          border: none;
+          background-image: url('../assets/Header/close_mobil.svg');
+          background-size: cover;
+          background-position: center;
         }
-      }
-      .mobileMenu {
-        position: fixed;
-        inset: 0;
-        background: #fff;
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 1000;
-        .generalContentMobil{
-          width: 100%;
-          text-align: center;
-          .headerMobil{
-            display: grid;
-            grid-template-columns: 1fr 30px;
-            padding: 15px;
-            .titleMenu {
-              margin-bottom: 0;
-              justify-self: start;
-              align-self: center;
-              font-weight: bold;
-              font-size: 30px;
-            }
-            .closeButton {
-              width: 30px;
-              height: 30px;
-              justify-self: start;
-              align-self: center;
-              background: none;
-              border: none;
-              background-image: url('../assets/Header/close_mobil.svg');
-              background-size: cover;
-              background-position: center;
-            }
-          }
-        }
-      }
-      .mobileMenu.active {
-        transform: translateY(0);
       }
     }
   }
+}
+
+.changeLenguage {
+  position: absolute;
+  z-index: 10;
+  top: 200px;
+  right: -18px;
+  rotate: -90deg;
+  padding: 15px;
+  border-radius: 15px 15px 0 0;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  &:hover { background-color: var(--hover-color); }
+}
 </style>

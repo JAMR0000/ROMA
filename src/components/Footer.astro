@@ -1,7 +1,64 @@
 ---
 const { t } = Astro.props;
 ---
-<footer>
-  <p>{t.text}</p>
 
+<footer>
+  <div class='container'>
+    <div class='generalContent'>
+      <div class='col'>
+        <p>Javier Mina #18, CP 45920 Ajijic, Jal.</p>
+      </div>
+      <div class='col'>
+        <p>Tel: (376) 766 3163</p>
+        <p>(376) 766 5171</p>
+        <p>Email: romaajijic@yahoo.com.mx</p>
+      </div>
+      <div class='col'>
+        <a href="/terms"><p>{t.Terms}</p></a>
+        <a href="/privacy"><p>{t.Privacy}</p></a>
+        <a href="/cookies"><p>{t.Cookies}</p></a>
+      </div>
+    </div>
+    <div class='copy'>
+      <p class='copyText'>{t.Copy}</p>
+    </div>
+  </div>
 </footer>
+<style lang='scss'>
+  footer {
+    border-top: 1px solid var(--primary-color);
+    p {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .generalContent {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 15px;
+      a {
+      text-decoration: none;
+      color: var(--black-color);
+      font-weight: bold;
+      transition: color 0.3s ease;
+      &:hover {
+        color: var(--primary-color);
+        transition: color 0.3s ease;
+      }
+    }
+    }
+    .copy{
+      text-align: center;
+      .copyText{
+        font-weight: normal;
+      }
+    }
+  }
+  @media(max-width: 992px) {
+    footer {
+      text-align: center;
+      .generalContent {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+</style>
