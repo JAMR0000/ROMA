@@ -33,14 +33,17 @@ const prefix = lang === 'en' ? '/en' : '';
 <style lang='scss'>
   footer {
     border-top: 1px solid var(--primary-color);
+    align-self: center !important;
     p {
       font-size: 16px;
       font-weight: bold;
     }
     .generalContent {
+      margin: 15px 0;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 15px;
+      align-items: center !important;
       a {
       text-decoration: none;
       color: var(--black-color);
