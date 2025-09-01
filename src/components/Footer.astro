@@ -1,11 +1,11 @@
 ---
-import es from '../locales/es.json';
-import en from '../locales/en.json';
+import es from '../locales/US.json';
+import en from '../locales/MX.json';
 
 const lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'es';
 const t = lang === 'en' ? en.footer : es.footer;
 
-const prefix = lang === 'en' ? '/en' : '';
+const prefix = lang === 'es' ? '/en' : '';
 ---
 
 <footer>

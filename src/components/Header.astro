@@ -1,15 +1,15 @@
 ---
-import es from '../locales/es.json';
-import en from '../locales/en.json';
+import en from '../locales/US.json';
+import es from '../locales/MX.json';
 
 // Detectar idioma desde la URL
-const lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'es';
+const lang = Astro.url.pathname.startsWith('/en') ? 'es' : 'en'; // 👈 INVERTIDO
 
-// Traducciones
+// Traducciones (también invertido)
 const t = lang === 'en' ? en.header : es.header;
 
 // Prefijo para links internos
-const prefix = lang === 'en' ? '/en' : '';
+const prefix = lang === 'es' ? '/en' : '';
 
 // Ruta actual sin el /en al inicio (para el toggle)
 const currentPath = Astro.url.pathname.replace(/^\/en/, '');
@@ -17,8 +17,8 @@ const currentPath = Astro.url.pathname.replace(/^\/en/, '');
 // URL para cambiar de idioma y quedarse en la misma página
 const toggleLang =
   lang === 'en'
-    ? currentPath || '/' // si estoy en inglés → quitar `/en`
-    : `/en${Astro.url.pathname}`; // si estoy en español → agregar `/en`
+    ? `/en${Astro.url.pathname}` // si estoy en inglés → agregar `/en`
+    : currentPath || '/';        // si estoy en español → quitar `/en`
 
 // Links de navegación
 const links = [
@@ -82,7 +82,7 @@ const links = [
 </header>
 
 <a class='changeLenguage' href={toggleLang}>
-  {lang === 'es' ? 'English' : 'Español'}
+  {lang === 'en' ? 'English' : 'Español'}
 </a>
 
 <style lang='scss'>

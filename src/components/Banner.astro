@@ -1,0 +1,47 @@
+---
+import en from '../locales/US.json';
+import es from '../locales/MX.json';
+
+const lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'es';
+const t = lang === 'en' ? en.footer : es.footer;
+
+const prefix = lang === 'en' ? '/en' : '';
+---
+<section class="banner">
+  <div class="banner__overlay">
+    <h1 class="banner__title">Bienvenido a mi página</h1>
+  </div>
+</section>
+
+<style lang="scss">
+.banner {
+  height: 500px;
+  width: 100%;
+  background-image: url('../assets/Banners/banner1.webp');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.4); // capa oscura para contraste
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: bold;
+    max-width: 800px;
+    padding: 0 1rem;
+  }
+}
+@media(max-width: 992px) {
+  .banner {
+    height: 300px;
+  }
+}
+</style>
