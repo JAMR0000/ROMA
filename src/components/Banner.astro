@@ -3,13 +3,13 @@ import en from '../locales/US.json';
 import es from '../locales/MX.json';
 
 const lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'es';
-const t = lang === 'en' ? en.footer : es.footer;
+const t = lang === 'en' ? en.banner : es.banner;
 
 const prefix = lang === 'en' ? '/en' : '';
 ---
 <section class="banner">
   <div class="banner__overlay">
-    <h1 class="banner__title">Bienvenido a mi página</h1>
+    <h1 class="banner__title">{t.title}</h1>
   </div>
 </section>
 

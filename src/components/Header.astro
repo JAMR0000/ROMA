@@ -203,10 +203,12 @@ const links = [
   }
 
   .changeLenguage {
-    position: absolute;
-    z-index: 10;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    z-index: 100;
     top: 200px;
-    right: -18px;
+    right: -50px;
     rotate: -90deg;
     padding: 15px;
     border-radius: 15px 15px 0 0;
@@ -215,10 +217,19 @@ const links = [
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    text-align: center;
+
     &:hover {
       transition: background-color 0.3s ease;
       color: var(--white-color);
       background-color: var(--black-color);
     }
   }
+  @media (max-width: 992px) {
+    .changeLenguage {
+      top: 350px;
+      right: -50px;
+    }
+  }
+
 </style>
