@@ -17,5 +17,16 @@
   },
   "banner": {
     "title": "Roma Property and Management."
+  },
+  "index":{
+    "service_Title" : "Nuestros Servicios",
+    "service_Desc": "Nuestros Servicios En ROMA Property Management, nos especializamos en brindar servicios integrales de administración de propiedades y condominios. Nuestro equipo se encarga de todas las responsabilidades administrativas, financieras y operativas para garantizar la operación eficiente y rentable de las propiedades que administramos.",
+    "service_Btn" : "Ver servicios",
+    "gallery_Title" : "Galeria",
+    "gallery_Desc" : " Descubra algunos de los proyectos de administración de propiedades y condominios que hemos completado. Nuestro enfoque en la excelencia y la atención al detalle se reflejan en cada propiedad que administramos.",
+    "gallery_Btn" : "Ver nuestros proyectos",
+    "testimonials_Title" : "Patrick O'Heffernan",
+    "testimonials_Desc" : "He confiado mi propiedad a Roma durante 4 años y cada día me alegro más de haberlo hecho. No importa lo que necesite, Verónica y su equipo se aseguran de que se haga bien y a tiempo. Muchas veces, mis vecinos han llamado a conocidos para pedir reparaciones o mejoras, solo para decepcionarse cuando no aparecen, hacen algo mal o no hacen nada. Roma nunca se detiene hasta que el trabajo está hecho y bien hecho, sin importar los esfuerzos extraordinarios que tengan que hacer. Además, me han mostrado el espíritu mexicano de la familia y puedo ayudarte: eres parte de la familia con Roma y su primer pensamiento es: ¿cómo podemos ayudarte? Verónica y Roma son simplemente las mejores.",
+    "testimonials_Btn" : "Ver mas testimonios"
   }
 }

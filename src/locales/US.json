@@ -17,5 +17,16 @@
   },
   "banner": {
     "title": "Roma Property and Management."
+  },
+  "index": {
+    "service_Title": "Our Services",
+    "service_Desc": "Our Services At ROMA Property Management, we specialize in providing comprehensive property and condominium management services. Our team handles all administrative, financial, and operational responsibilities to ensure the efficient and profitable operation of the properties we manage.",
+    "service_Btn": "See Services",
+    "gallery_Title": "Gallery",
+    "gallery_Desc": "Discover some of the property and condominium management projects we have completed. Our focus on excellence and attention to detail is reflected in every property we manage.",
+    "gallery_Btn": "See our projects",
+    "testimonials_Title": "Patrick O'Heffernan -  Ajijic",
+    "testimonials_Desc": "I have trusted Roma with my property for 4 years and every day I am so glad I have. No matter what I need, Veronica and her team makes sure it gets done, right, on time. So many times, my neighbors have called “people they know” for repairs or upgrades only to be disappointed when they don’t show up or they come and do the wrong thing or nothing at all. Roma never stops until the job is done and done right, no matter what extraordinary lengths they have to go to. Plus they have shown me the Mexican spirit of la familia and puedo ayudarte- you are part of the family with Roma and their first thought is how can we help you? . Veronica and Roma are simply the best.",
+    "testimonials_Btn": "See more testimonials"
   }
 }
