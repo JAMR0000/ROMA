@@ -1,0 +1,36 @@
+---
+const { member } = Astro.props;
+--- 
+<div class="ContendGeneral">
+  <div class='contentImg'>
+    <img src={member.img} alt="team_img">
+   </div>
+   <div class="infoContend">
+    <p class="nameCard">{member.name}</p>
+    <p class="positionCard">{member.position}</p>
+   </div>
+    
+   
+</div>
+<style lang="scss">
+  .ContendGeneral {
+    width: fit-content;
+    color: var(--white-color);
+    .contentImg {
+      margin-bottom:  10px;
+      img {
+        width: 350px;
+        height: 350px;
+      }
+    }
+    .infoContend{
+      .nameCard {
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      // .positionCard {
+       
+      // }
+    }
+  }
+</style>

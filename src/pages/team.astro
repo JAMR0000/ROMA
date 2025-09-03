@@ -1,8 +1,47 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CardsEquipments from '../components/CardsEquipments.astro';
+import en from '../locales/US.json';
+import es from '../locales/MX.json';
 
+// Detectar idioma
+const lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'es';
+
+// Seleccionar traducciones
+const t = lang === 'en' ? en : es;
 ---
 
-<Layout lang="es" title="Equipo">
-  <h1>Equipo</h1>
+<Layout lang='es' title='Equipo'>
+  <div class='container'>
+    <h1 class='titleHeader'>Equipo</h1>
+    <div class='gridCards'>
+      {t.team.map((member) => <CardsEquipments member={member} />)}
+    </div>
+  </div>
 </Layout>
+<style lang='scss'>
+  .titleHeader {
+    margin: 25px 0;
+    text-align: center;
+    color: var(--white-color);
+  }
+  .gridCards {
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-self: center;
+    flex: 0 1 calc(33.333% - 2rem);
+    gap: 35px;
+  }
+  @media (max-width: 992px) {
+    .gridCards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 768px) {
+    .gridCards {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

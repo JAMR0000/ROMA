@@ -48,4 +48,7 @@ p {
     height: auto;
     object-fit: cover;
     display: block;
+    img{
+      object-fit: cover;
+    }
 } 

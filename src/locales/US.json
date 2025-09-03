@@ -33,5 +33,37 @@
     "title": "About Us",
     "firstDescription": "Leading property management agency for private and condominium properties in Ajijic and the picturesque lake area. Let us help you manage your perfect home with our experience and trust. Our passion for excellence is reflected in everything we do, from property management to condominium maintenance. We are here to make your property management hassle-free and successful.",
     "secondDescription": "At ROMA Property Management, we believe the small details make the difference. From personalized attention to diligent problem-solving, we strive to provide service that exceeds expectations. We value the trust our clients place in us and are committed to maintaining high standards in everything we do."
-  }
+  },
+  "team": [
+    {
+      "img": "../assets/Team/vero.webp",
+      "name": "Veronica Martinez",
+      "position": "Owner and Hands-on Manager",
+      "history": "A 35-year resident of the Lake Chapala area, Veronica holds a Public Accounting Degree (LCP) and has been dedicated to property management since 1999, recently adding condominium management services. She is recognized for her ethical and responsive qualities, providing clients with a stress-free life whether in Chapala or abroad. Veronica goes beyond standard services, paying bills such as insurance, phone, and medical expenses. She has built and vetted the best team to support customers, ensuring satisfaction whether they stay long-term or seasonally."
+    },
+    {
+      "img": "../assets/Team/erika.webp",
+      "name": "Erika Zurita",
+      "position": "Operations Assistant",
+      "history": "Erika, 40, holds a degree in Quality Service and has six years of customer service experience. Since 2010, she has been part of ROMA, managing personnel (bonuses, payroll) and assisting with plumbers, electricians, technicians, and carpenters. She also supports Veronica with legal matters such as IMSS, immigration, labor rights, and taxes. Although she is the only team member who speaks only Spanish, she is always willing to help as needed."
+    },
+    {
+      "img": "../assets/Team/daniela.webp",
+      "name": "Daniela Ibarra",
+      "position": "Accounting Assistant",
+      "history": "Originally from Chapala, Daniela is 24 years old, bilingual, and holds a degree in Business Engineering from the University of Guadalajara. She is currently studying a third language and aims to continue growing personally and professionally. In her free time, she enjoys exercising, reading, and cooking. Her experience at ROMA has helped her develop in the administrative and financial fields, applying her skills in a professional environment."
+    },
+    {
+      "img": "../assets/Team/alejandra.webp",
+      "name": "Alejandra Rivera",
+      "position": "Operations Assistant",
+      "history": "A graduate in Business Administration from UNIVA, Alejandra has over three years of professional experience at ROMA. She is passionate about her work, particularly in organizing documents and managing procedures with government agencies and private institutions. Additionally, she practices yoga, which helps her maintain a balance between her professional and personal life."
+    },
+    {
+      "img": "../assets/Team/fernando.webp",
+      "name": "Fernando Segura",
+      "position": "Courier",
+      "history": "Originally from Chapala, Fernando is honest, responsible, and helpful. He has been working at ROMA for six years as a courier, with extensive customer service experience. Previously, he worked in government offices in Chapala. His main goal is to keep learning and contribute to both tourism and his community."
+    }
+  ]
 }
