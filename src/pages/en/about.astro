@@ -1,7 +1,89 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import en from '../../locales/US.json';
+import es from '../../locales/MX.json';
+
+// Detectar idioma
+const lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'es';
+
+// Seleccionar traducciones
+const t = lang === 'en' ? en : es;
 ---
 
-<Layout lang="en" title="ABOUT US">
-  <h1>ABOUT</h1>
+<Layout lang='en' title='ABOUT US'>
+  <div class='container'>
+    <div class='firstContainerAbout'>
+      <div class='infoCol'>
+        <h2 class='titleAbout'>{t.about.title}</h2>
+        <p class='descriptionAbout'>
+          {t.about.firstDescription}
+        </p>
+      </div>
+      <div class='contentImg'>
+        <img src='/src/assets/img-CS.webp' alt='img' />
+      </div>
+    </div>
+    <div class='secondAboutContainer'>
+      <div class='contentImg'>
+        <img src='/src/assets/img-CS.webp' alt='img' />
+      </div>
+      <div class='infoCol'>
+        <p class='descriptionSecondAbout'>
+          {t.about.secondDescription}
+        </p>
+      </div>
+    </div>
+  </div>
 </Layout>
+<style lang='scss'>
+  .contentImg {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .firstContainerAbout {
+    margin-top: 23px;
+    padding: 25px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    color: var(--white-color);
+    .infoCol {
+      .titleAbout {
+        margin-bottom: 35px;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    .firstContainerAbout {
+      grid-template-columns: 1fr;
+      padding-bottom: 0;
+      .infoCol {
+        .titleAbout {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  .secondAboutContainer {
+    margin-bottom: 23px;
+    padding: 25px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    color: var(--white-color);
+  }
+  @media (max-width: 992px) {
+    .secondAboutContainer {
+      padding-bottom: 0;
+      grid-template-columns: 1fr;
+      .infoCol {
+        order: 1;
+      }
+      .contentImg {
+        order: 2;
+      }
+    }
+  }
+</style>

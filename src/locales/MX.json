@@ -28,5 +28,10 @@
     "testimonials_Title" : "Patrick O'Heffernan",
     "testimonials_Desc" : "He confiado mi propiedad a Roma durante 4 años y cada día me alegro más de haberlo hecho. No importa lo que necesite, Verónica y su equipo se aseguran de que se haga bien y a tiempo. Muchas veces, mis vecinos han llamado a conocidos para pedir reparaciones o mejoras, solo para decepcionarse cuando no aparecen, hacen algo mal o no hacen nada. Roma nunca se detiene hasta que el trabajo está hecho y bien hecho, sin importar los esfuerzos extraordinarios que tengan que hacer. Además, me han mostrado el espíritu mexicano de la familia y puedo ayudarte: eres parte de la familia con Roma y su primer pensamiento es: ¿cómo podemos ayudarte? Verónica y Roma son simplemente las mejores.",
     "testimonials_Btn" : "Ver mas testimonios"
+  },
+  "about": {
+    "title": "Nosotros",
+    "firstDescription": "Somos la agencia líder de administración de propiedades y condominios en Ajijic y el área del lago. Permítanos ayudarte a gestionar tu hogar perfecto con nuestra experiencia y confianza. Nuestra pasión por la excelencia se refleja en todo lo que hacemos, desde la administración de propiedades hasta el mantenimiento de condominios. Estamos aquí para hacer que la gestión de tus propiedades sea libre de complicaciones y exitosa.",
+    "secondDescription": "Creemos que los detalles pequeños hacen la diferencia. Desde atención personalizada hasta la solución diligente de problemas, nos esforzamos por proporcionar un servicio que exceda las expectativas. Valoramos la confianza que nuestros clientes depositan en nosotros y nos comprometemos a mantener altos estándares en todo lo que hacemos."
   }
 }
