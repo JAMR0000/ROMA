@@ -36,31 +36,31 @@
   },
   "team": [
     {
-      "img": "../assets/Team/vero.webp",
+      "img": "/assets/Team/vero.webp",
       "name": "Verónica Martínez",
       "position": "Propietaria y Gerente Operativa",
       "history": "Con 35 años de residencia en la zona de Chapala, Verónica es Licenciada en Contaduría Pública (LCP) y se ha dedicado a la administración de propiedades desde 1999, recientemente incorporando la administración de condominios. Es reconocida por su ética, capacidad de respuesta y honestidad, lo que brinda a sus clientes una vida libre de preocupaciones tanto en Chapala como en el extranjero. Ofrece servicios únicos en el sector, como el pago de facturas de seguros, telefonía, médicos, entre otros. Ha reunido y capacitado al mejor equipo de colaboradores para beneficio de los clientes."
     },
     {
-      "img": "../assets/Team/erika.webp",
+      "img": "/assets/Team/erika.webp",
       "name": "Erika Zurita",
       "position": "Asistente de Operaciones",
       "history": "Erika tiene 40 años y es Licenciada en Calidad en el Servicio. Cuenta con seis años de experiencia en atención al cliente y desde 2010 forma parte de ROMA, donde se encarga de la gestión de personal (bonos legales, nómina) y coordina con plomeros, electricistas, técnicos y carpinteros. También apoya a Verónica en temas legales como IMSS, migración, derechos laborales y temas fiscales. Aunque es la única del equipo que solo habla español, siempre está dispuesta a ayudar en lo que se requiera."
     },
     {
-      "img": "../assets/Team/daniela.webp",
+      "img": "/assets/Team/daniela.webp",
       "name": "Daniela Ibarra",
       "position": "Asistente Contable",
       "history": "Originaria de Chapala, Daniela tiene 24 años, es bilingüe y es Ingeniera en Negocios por la Universidad de Guadalajara. Actualmente estudia un tercer idioma y busca seguir creciendo personal y profesionalmente. En su tiempo libre disfruta del ejercicio, la lectura y la cocina. Su experiencia en ROMA le ha permitido desarrollarse en el área administrativa y financiera, aplicando sus conocimientos en el ámbito profesional."
     },
     {
-      "img": "../assets/Team/alejandra.webp",
+      "img": "/assets/Team/alejandra.webp",
       "name": "Alejandra Rivera",
       "position": "Asistente de Operaciones",
       "history": "Egresada en Administración de Empresas por la UNIVA, cuenta con más de tres años de experiencia profesional en ROMA. Es apasionada de su trabajo, especialmente en la organización de documentos y la gestión de trámites con dependencias gubernamentales y privadas. Además, practica yoga, lo que le ayuda a mantener el equilibrio entre su vida profesional y personal."
     },
     {
-      "img": "../assets/Team/fernando.webp",
+      "img": "/assets/Team/fernando.webp",
       "name": "Fernando Segura",
       "position": "Mensajero",
       "history": "Originario de Chapala, es una persona honesta, responsable y servicial. Ha trabajado seis años en ROMA como mensajero y cuenta con amplia experiencia en servicio al cliente. Anteriormente laboró en oficinas gubernamentales del municipio de Chapala. Uno de sus objetivos es aprender constantemente y contribuir tanto al turismo como a su comunidad."
