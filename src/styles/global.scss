@@ -46,9 +46,14 @@ p {
 .contentImg{
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: cover !important;
     display: block;
     img{
-      object-fit: cover;
+      object-fit: cover !important;
     }
 } 
+.titleHeader {
+  margin: 25px 0;
+  text-align: center;
+  color: var(--white-color);
+}
